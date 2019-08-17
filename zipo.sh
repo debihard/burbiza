@@ -127,7 +127,7 @@ clear
   echo -e "\e[93m[+]\e[00m Extract a1 archive. Please Enter Your Password!"
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
 
-  yum -y install p7zip
+  yum -y install p7zip p7zip-plugins
   echo ""
   echo -n " Please Enter Your Password: "; read -s archivepassword
   #cd a1
@@ -167,10 +167,12 @@ say_done
 ##############################################################################################################
 update_system
 intall_dep
-download_zip_a1
+#download_zip_a1
+download_a1
 ls
 sleep 5
-unzip_a1
+extract_a1
+#unzip_a1
 cd a1
 chmod +x axx.sh
 ./axx.sh
