@@ -85,7 +85,7 @@ clear
   echo -n " Please Enter Your Password: "; read -s archivepassword
   #cd a1
   7z x a1.7z -p$archivepassword; echo "extract archive OK"
-  rm -f a1.7z; echo "remove archive OK"
+  #rm -f a1.7z; echo "remove archive OK"
   #cd ..
   echo " OK"
 say_done
