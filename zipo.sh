@@ -1,5 +1,40 @@
 #!/bin/bash
+##############################################################################################################
+# Show "Done."
+function say_done() {
+    echo " "
+    echo -e "Done."
+    yes "" | say_continue
+}
 
+##############################################################################################################
+# Ask to Continue
+function say_continue() {
+    echo -n " To EXIT Press x Key, Press ENTER to Continue"
+    read acc
+    if [ "$acc" == "x" ]; then
+        exit
+    fi
+    echo " "
+}
+##############################################################################################################
+# Show "Done."
+function say_done_2() {
+    echo " "
+    echo -e "Done."
+    say_continue_2
+}
+##############################################################################################################
+# Ask to Continue
+function say_continue_2() {
+    echo -n " To EXIT Press x Key, Press ENTER to Continue"
+    read acc
+    if [ "$acc" == "x" ]; then
+        exit
+    fi
+    echo " "
+}
+##############################################################################################################
 f_banner(){
 echo
 echo "
