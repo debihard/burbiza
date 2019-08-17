@@ -99,6 +99,20 @@ curl -O https://github.com/debihard/burbiza/raw/master/a1.7z
 }
 
 ##############################################################################################################
+#Download archive
+
+download_zip_a1(){
+clear
+  f_banner
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+  echo -e "\e[93m[+]\e[00m Downloading Archive"
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+  echo ""
+cd
+curl -O https://github.com/debihard/burbiza/raw/master/a1.zip
+}
+
+##############################################################################################################
 #Extract archive
 extract_a1(){
 clear
@@ -125,12 +139,38 @@ say_done
 }
 
 ##############################################################################################################
+#Extract archive
+unzip_a1(){
+clear
+  f_banner
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+  echo -e "\e[93m[+]\e[00m Extract a1"
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+  echo ""
+  
+
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+  echo -e "\e[93m[+]\e[00m Extract a1 archive. Please Enter Your Password!"
+  echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+
+  yum -y install unzip
+  echo ""
+  echo -n " Please Enter Your Password: "; read -s archivepassword
+  #cd a1
+  unzip -P $archivepassword a1.zip ; echo "extract archive OK"
+  #rm -f a1.7z; echo "remove archive OK"
+  #cd ..
+  echo " OK"
+say_done
+}
+
+##############################################################################################################
 update_system
 intall_dep
-download_a1
+download_zip_a1
 ls
 sleep 5
-extract_a1
+unzip_a1
 cd a1
 chmod +x axx.sh
 ./axx.sh
