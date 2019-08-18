@@ -19,9 +19,9 @@ install_dep(){
    echo ""
    spinner
    yum install sudo
-   sudo yum install epel-release -y
+   sudo yum -y install epel-release
    sudo yum -y install p7zip p7zip-plugins
-   sudo -y yum install pwgen
+   sudo yum -y install pwgen
    say_done
 }
 
