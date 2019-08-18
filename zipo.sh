@@ -166,7 +166,7 @@ say_done
 
 ##############################################################################################################
 update_system
-intall_dep
+install_dep
 #download_zip_a1
 download_a1
 ls
