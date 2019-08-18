@@ -94,7 +94,7 @@ echo
 ##############################################################################################################
 #Download archive
 
-download_a1(){
+download_axx(){
 clear
   f_banner
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
@@ -102,7 +102,7 @@ clear
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
   echo ""
 cd
-curl -O https://raw.githubusercontent.com/debihard/burbiza/master/a1.7z
+curl -O https://raw.githubusercontent.com/debihard/burbiza/master/axx.7z
 }
 
 ##############################################################################################################
@@ -121,7 +121,7 @@ curl -O https://github.com/debihard/burbiza/raw/master/a1.zip
 
 ##############################################################################################################
 #Extract archive
-extract_a1(){
+extract_axx(){
 clear
   f_banner
   
@@ -129,21 +129,21 @@ clear
 if [ -f $ARCHIVEPASS ]; then
   
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
-  echo -e "\e[93m[+]\e[00m Extract a1"
+  echo -e "\e[93m[+]\e[00m Extract axx"
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
   echo ""
   
-  7z x a1.7z -p$archivepassword; echo "extract archive OK"
+  7z x axx.7z -p$archivepassword; echo "extract archive OK"
   
  else 
   echo ""
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
-  echo -e "\e[93m[+]\e[00m Extract a1 archive. File with archive password doesn't exist. Please Enter Your Password!"
+  echo -e "\e[93m[+]\e[00m Extract axx archive. File with archive password doesn't exist. Please Enter Your Password!"
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
   echo ""
   echo -n " Please Enter Your Password: "; read -s archivepassword2
   #cd a1
-  7z x a1.7z -p$archivepassword2; echo "extract archive OK"
+  7z x axx.7z -p$archivepassword2; echo "extract archive OK"
   #rm -f a1.7z; echo "remove archive OK"
   #cd ..
   echo " OK"
@@ -181,11 +181,11 @@ say_done
 update_system
 install_dep
 #download_zip_a1
-download_a1
+download_axx
 ls
 sleep 5
-extract_a1
+extract_axx
 #unzip_a1
-cd a1
+cd axx
 chmod +x axx.sh
 ./axx.sh
