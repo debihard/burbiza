@@ -95,7 +95,7 @@ clear
   echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
   echo ""
 cd
-curl -O https://github.com/debihard/burbiza/raw/master/a1.7z
+curl -O https://raw.githubusercontent.com/debihard/burbiza/master/a1.7z
 }
 
 ##############################################################################################################
