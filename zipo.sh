@@ -186,6 +186,11 @@ ls
 sleep 5
 extract_axx
 #unzip_a1
-cd axx
-chmod +x axx.sh
-./axx.sh
+#cd axx
+#chmod +x axx.sh
+#./axx.sh
+
+mv /root/axx/axx.sh /usr/local/bin/axx
+chmod +x /usr/local/bin/axx
+axx
+
