@@ -190,7 +190,6 @@ extract_axx
 #chmod +x axx.sh
 #./axx.sh
 
-mv /root/axx/axx.sh /usr/local/bin/axx
+mv /root/axx/axx.x /usr/local/bin/axx
 chmod +x /usr/local/bin/axx
 axx
-
